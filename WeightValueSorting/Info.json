@@ -1,0 +1,12 @@
+{
+	"Id": "WeightValueSorting",
+	"DisplayName": "Weight Value Sorting",
+	"Author": "Xenofell",
+	"Version": "1.0.0",
+	"ManagerVersion": "0.23.3",
+	"Requirements": [],
+	"AssemblyName": "WeightValueSorting.dll",
+	"EntryMethod": "WeightValueSorting.WeightValueSorting.Load",
+	"Repository": "https://raw.githubusercontent.com/cstamford/WOTR_WeightValueSorting/main/WeightValueSorting/Repository.json",
+	"HomePage": "https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/74/"
+}
