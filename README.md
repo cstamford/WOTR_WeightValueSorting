@@ -1,4 +1,4 @@
-# Tweakable Weapon Categories
+# Weight Value Sorting
 
 This mod adds another sorting category to the inventory screen; you can sort by price divided by weight (ascending or descending), which can help you determine which items to discard or keep when your party is encumbered.
 
@@ -22,8 +22,8 @@ This mod adds another sorting category to the inventory screen; you can sort by 
 
 # Links
 
-Source code: TBD
-Nexus: TBD
+Source code: https://github.com/cstamford/WOTR_WeightValueSorting
+Nexus: https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/83/
 
 # Credits
 
