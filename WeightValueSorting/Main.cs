@@ -23,12 +23,6 @@ namespace WeightValueSorting
         }
     }
 
-    enum ExpandedSorterType
-    {
-        WeightValueUp = 11,
-        WeightValueDown = 12
-    }
-
     [HarmonyPatch(typeof(ItemsFilterPCView), nameof(ItemsFilterPCView.Initialize))]
     public static class ItemsFilterPCView_Initialize
     {
@@ -50,9 +44,15 @@ namespace WeightValueSorting
     {
         private static int CompareByWeightValue(ItemEntity a, ItemEntity b, ItemsFilter.FilterType filter)
         {
-            float a_weight_value = a.Blueprint.Cost / a.Blueprint.Weight;
-            float b_weight_value = b.Blueprint.Cost / b.Blueprint.Weight;
+            float a_weight_value = a.Blueprint.Weight == 0.0f ? float.PositiveInfinity : a.Blueprint.Cost / a.Blueprint.Weight;
+            float b_weight_value = b.Blueprint.Weight == 0.0f ? float.PositiveInfinity : b.Blueprint.Cost / b.Blueprint.Weight;
             return a_weight_value == b_weight_value ? ItemsFilter.CompareByTypeAndName(a, b, filter) : (a_weight_value > b_weight_value ? 1 : -1);
+        }
+
+        private enum ExpandedSorterType
+        {
+            WeightValueUp = 11,
+            WeightValueDown = 12
         }
 
         [HarmonyPrefix]
